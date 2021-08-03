@@ -116,22 +116,39 @@ body {
 	position: relative;
 }
 
-.wave-container .wave {
+.wave-container {
+	margin-bottom: -10px;
+}
+
+.wave-container .wave-black {
 	display: block;
 	transform-origin: bottom;
-	animation: animateWave 15s linear infinite;
+	animation: animateWave-black 8s linear infinite;
 	animation-direction: alternate;
 }
 
-@keyframes animateWave {
+.wave-container .wave-green {
+	display: block;
+	transform-origin: bottom;
+	animation: animateWave-green 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes animateWave-black {
 	0% {
 		transform: translateZ(0) scaleY(1);
 	}
-	50% {
-		transform: translateZ(0) scaleY(0.55);
+	100% {
+		transform: translateZ(0) scaleY(0.6);
+	}
+}
+
+@keyframes animateWave-green {
+	0% {
+		transform: translateZ(0) scaleY(1.1);
 	}
 	100% {
-		transform: translateZ(0) scaleY(1);
+		transform: translateZ(0) scaleY(0.7);
 	}
 }
 
@@ -140,7 +157,6 @@ body {
 	position: relative;
 	width: 100%;
 	text-align: center;
-	margin: -1px 0;
 	padding: 1.4rem 1.5rem;
 }
 
@@ -418,7 +434,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 9px;
+	width: 11px;
 }
 
 ::-webkit-scrollbar-track {
@@ -583,6 +599,14 @@ body {
 		display: block;
 	}
 
+	.streamers .container {
+		display: inline-block;
+	}
+
+	.streamers .container .column {
+		padding: 15px 0;
+	}
+
 	.features .column {
 		text-align: center;
 		margin: auto;
@@ -593,7 +617,7 @@ body {
 	}
 
 	.statistics .container .column .description {
-		font-size: 38px;
+		font-size: 34px;
 	}
 
 	.statistics .container .column .title {

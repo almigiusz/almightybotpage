@@ -19,10 +19,8 @@
 
 //loader
 
-var myVar;
-
 function loader() {
-	myVar = setTimeout(showPage, 600);
+	setTimeout(showPage, 600);
 }
 
 function showPage() {
